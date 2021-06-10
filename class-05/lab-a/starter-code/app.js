@@ -51,9 +51,13 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-  let sum = a + b + c;
-  let multiply = a * b * c;
-  return[sum,multiply,`${a} and ${b} and ${c} sum to ${sum}.`,`The product of ${a} and ${b} and ${c} is ${multiply}.`]
+  let h = sum(a, b)[0];
+   let g = sum(h, c)[0];
+   let x = multiply(a, b)[0];
+   let y = multiply(x, c)[0];
+  
+  
+  return[g,y,`${a} and ${b} and ${c} sum to ${g}.`,`The product of ${a} and ${b} and ${c} is ${y}.`]
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
@@ -75,12 +79,12 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
-  let sum =0;
+  let sumed =0;
   for (let i = 0; i < sumArr.length; i++) {
-     sum =sum + sumArr[i];
+     sumed =sum(sumed,sumArr[i])[0]
     
   }
-  return[sum,`${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${sum} is their sum.`]
+  return[sumed,`${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${sumed} is their sum.`]
 
 }
 
